@@ -193,6 +193,18 @@ PRODUCT_COPY_FILES += \
     vendor/broken/proprietary/common/system/media/audio/notifications/Tethys.ogg:system/media/audio/notifications/Tethys.ogg \
     vendor/broken/proprietary/common/system/media/audio/notifications/Titan.ogg:system/media/audio/notifications/Titan.ogg
 
+# Google PinYin
+PRODUCT_COPY_FILES += $(shell test -d vendor/cm/prebuilt/google/app/GooglePinYin && \
+    find vendor/cm/prebuilt/google/app/GooglePinYin -name '*.apk' \
+    -printf '%p:system/app/GooglePinYin/%f ')
+PRODUCT_COPY_FILES += $(shell test -d vendor/cm/prebuilt/google/app/GooglePinYin && \
+    find vendor/cm/prebuilt/google/app/GooglePinYin -name '*.so' \
+    -printf '%p:system/app/GooglePinYin/lib/arm/%f ')
+
+#ForceStop
+PRODUCT_COPY_FILES += \
+    vendor/sm/prebuilt/ForceStop/ForceStop.apk:system/app/ForceStop/ForceStop.apk
+
 # CM Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
     org.cyanogenmod.hardware \
