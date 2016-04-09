@@ -208,7 +208,6 @@ PRODUCT_PACKAGES += \
 
 # Required packages
 PRODUCT_PACKAGES += \
-    CellBroadcastReceiver \
     Development \
     SpareParts 
 
@@ -216,8 +215,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Basic \
     LiveWallpapersPicker \
-    PhaseBeam \
-    SlimLauncher
+    PhaseBeam
 
 # DSPManager
 PRODUCT_PACKAGES += \
@@ -231,9 +229,9 @@ PRODUCT_PACKAGES += \
     DashClock \
     LockClock \
     WallpaperPicker \
+    BrokenCenter \
     BrokenOTA \
     BrokenWalls \
-    BrokenCenter \
     Browser
 
 # AudioFX
@@ -316,7 +314,7 @@ endif
 BROKEN_VERSION_MAJOR = 6.0.1
 BROKEN_VERSION_MINOR = build
 BROKEN_POSTFIX := -$(shell date +"%Y%m%d")
-PRODUCT_VERSION_MAINTENANCE = v4.4
+PRODUCT_VERSION_MAINTENANCE = v4.5
 
 ifeq ($(BUILD_TYPE),NINJA)
     PLATFORM_VERSION_CODENAME := NINJA
